@@ -103,7 +103,9 @@ set output "simple-histo.svg"
 
 plot CSV_FILE
 
-# lambdas-histo.csv  massive-klass-histo.csv  reflection-histo.csv  simple-histo.csv  simple-histo.svg  spring-petclinic-histo.cs
+set terminal pngcairo enhanced size 700,300 font PNGFONT
+set output "simple-histo.png"
+replot
 
 CSV_FILE="lambdas-histo.csv"
 set title "Java program with lots of Lambdas (5000)"
@@ -111,14 +113,27 @@ set output "lambdas-histo.svg"
 
 plot CSV_FILE
 
+set terminal pngcairo enhanced size 700,300 font PNGFONT
+set output "lambdas-histo.png"
+replot
+
 CSV_FILE="reflection-histo.csv"
 set title "Java program which stresses reflection (5000 methods)"
 set output "reflection-histo.svg"
 
 plot CSV_FILE
 
+set terminal pngcairo enhanced size 700,300 font PNGFONT
+set output "reflection-histo.png"
+replot
+
 CSV_FILE="spring-petclinic-histo.csv"
 set title "Sprint petclinic, after startup"
 set output "spring-petclinic-histo.svg"
 
 plot CSV_FILE
+
+set terminal pngcairo enhanced size 700,300 font PNGFONT
+set output "spring-petclinic-histo.png"
+replot
+
