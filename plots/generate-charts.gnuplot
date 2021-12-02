@@ -94,43 +94,52 @@ set xlabel 'Allocation size (in words)' # label for the X axis
 
 set logscale x 2
 
-set terminal svg enhanced size 1000,500 font SVGFONT
 #########################################
 
 CSV_FILE="simple-histo.csv"
 set title "Simple Java program, Hello World"
-set output "simple-histo.svg"
 
+set terminal svg enhanced size 1000,500 font SVGFONT
+set output "simple-histo.svg"
 plot CSV_FILE
 
 set terminal pngcairo enhanced size 700,300 font PNGFONT
 set output "simple-histo.png"
 replot
 
+####
+
 CSV_FILE="lambdas-histo.csv"
 set title "Java program with lots of Lambdas (5000)"
-set output "lambdas-histo.svg"
 
+set terminal svg enhanced size 1000,500 font SVGFONT
+set output "lambdas-histo.svg"
 plot CSV_FILE
 
 set terminal pngcairo enhanced size 700,300 font PNGFONT
 set output "lambdas-histo.png"
 replot
 
+####
+
 CSV_FILE="reflection-histo.csv"
 set title "Java program which stresses reflection (5000 methods)"
-set output "reflection-histo.svg"
 
+set terminal svg enhanced size 1000,500 font SVGFONT
+set output "reflection-histo.svg"
 plot CSV_FILE
 
 set terminal pngcairo enhanced size 700,300 font PNGFONT
 set output "reflection-histo.png"
 replot
 
+####
+
 CSV_FILE="spring-petclinic-histo.csv"
 set title "Sprint petclinic, after startup"
-set output "spring-petclinic-histo.svg"
 
+set terminal svg enhanced size 1000,500 font SVGFONT
+set output "spring-petclinic-histo.svg"
 plot CSV_FILE
 
 set terminal pngcairo enhanced size 700,300 font PNGFONT
